@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/random-recipe/static/css/main.d0d71aa7.chunk.css",
-    "main.js": "/random-recipe/static/js/main.6af1455f.chunk.js",
-    "main.js.map": "/random-recipe/static/js/main.6af1455f.chunk.js.map",
-    "runtime-main.js": "/random-recipe/static/js/runtime-main.c1065011.js",
-    "runtime-main.js.map": "/random-recipe/static/js/runtime-main.c1065011.js.map",
-    "static/js/2.c1d352cf.chunk.js": "/random-recipe/static/js/2.c1d352cf.chunk.js",
-    "static/js/2.c1d352cf.chunk.js.map": "/random-recipe/static/js/2.c1d352cf.chunk.js.map",
-    "index.html": "/random-recipe/index.html",
-    "static/css/main.d0d71aa7.chunk.css.map": "/random-recipe/static/css/main.d0d71aa7.chunk.css.map",
-    "static/js/2.c1d352cf.chunk.js.LICENSE.txt": "/random-recipe/static/js/2.c1d352cf.chunk.js.LICENSE.txt"
+    "main.css": "/random-recipes-app/static/css/main.d0d71aa7.chunk.css",
+    "main.js": "/random-recipes-app/static/js/main.6af1455f.chunk.js",
+    "main.js.map": "/random-recipes-app/static/js/main.6af1455f.chunk.js.map",
+    "runtime-main.js": "/random-recipes-app/static/js/runtime-main.d7527766.js",
+    "runtime-main.js.map": "/random-recipes-app/static/js/runtime-main.d7527766.js.map",
+    "static/js/2.c1d352cf.chunk.js": "/random-recipes-app/static/js/2.c1d352cf.chunk.js",
+    "static/js/2.c1d352cf.chunk.js.map": "/random-recipes-app/static/js/2.c1d352cf.chunk.js.map",
+    "index.html": "/random-recipes-app/index.html",
+    "static/css/main.d0d71aa7.chunk.css.map": "/random-recipes-app/static/css/main.d0d71aa7.chunk.css.map",
+    "static/js/2.c1d352cf.chunk.js.LICENSE.txt": "/random-recipes-app/static/js/2.c1d352cf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1065011.js",
+    "static/js/runtime-main.d7527766.js",
     "static/js/2.c1d352cf.chunk.js",
     "static/css/main.d0d71aa7.chunk.css",
     "static/js/main.6af1455f.chunk.js"
