@@ -5,21 +5,24 @@
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .App {
+  border: 1px solid black;
   max-height: 100%;
   width: 80%;
   margin: auto;
   padding: 20px;
-  background-color: white;
+  background-color: hsl(51, 17%, 92%);
   font-family: sans-serif;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .wrapper {
+  overflow: hidden;
+  height: 450px;
   margin: auto;
   width: 80%;
   display: grid;
@@ -35,6 +38,14 @@ body {
   grid-area: section2;
 }
 
+.sourceLink {
+  font-size: .8em;
+  text-decoration: none;
+  color: hsl(253, 100%, 59%);
+  font-style: italic;
+  font-weight: bold;
+}
+
 .generatedMeal {
   font-style: italic;
   font-weight: 700;
@@ -42,7 +53,7 @@ body {
 
 .ingredients {
   margin: auto;
-  background-color: hsl(110, 81%, 94%);
+  background-color: hsl(13, 36%, 85%);
   min-height: 300px;
   width: 100%;
   display: grid;
@@ -61,11 +72,15 @@ body {
 }
 
 .ingredientsList {
+  line-height: 1;
   grid-area: ingredientsList;
   font-weight: 700;
+  font-size: .8em;
 }
 
 .measurementsList {
+  line-height: 1;
   grid-area: measurementsList;
   font-weight: 300;
+  font-size: .8em;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactPlayer from 'react-player/youtube';
 
 import '../src/style.css';
 
@@ -12,7 +13,8 @@ class App extends React.Component {
       isFetchingRecipe: false,
       arraylist: [],
       strThumb: null,
-      strSource: null
+      strSource: null,
+      strYoutube: null
     };
     this.randomRecipe = this.randomRecipe.bind (this);
   }
@@ -36,7 +38,8 @@ class App extends React.Component {
           isFetchingRecipe: false,
           arraylist: json.meals,
           strThumb: json.meals[0].strMealThumb,
-          strSource: json.meals[0].strSource
+          strSource: json.meals[0].strSource,
+          strYoutube: json.meals[0].strYoutube
         });
         this.trialMeal = json.meals[0];
         console.log(this.trialMeal);
@@ -51,14 +54,15 @@ class App extends React.Component {
     return (
       <div className="App">
       <div className="wrapper">
-        <div className="section1">
+        <div className="section1" >
           <h1>
           {this.state.isFetchingRecipe
             ? 'Loading Recipe...'
             : this.state.strMeal}
           </h1>
-          <img src={this.state.strThumb} alt='mealThumbnail' width="300" height="300" />
-          <a className="sourceLink" href={this.state.strSource} target="_blank">{this.state.strSource}</a>
+          <img src={this.state.strThumb} alt='mealThumbnail' width="200" height="200" />
+          <br />
+          <a className="sourceLink" href={this.state.strSource} target="_blank">Source Link</a>
           <br />
           <button
             className="myButton"
@@ -118,6 +122,7 @@ class App extends React.Component {
         </div>
       
       </div>
+      <ReactPlayer url={this.state.strYoutube} />
       </div>
     );
   }
