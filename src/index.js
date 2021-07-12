@@ -61,7 +61,7 @@ class App extends React.Component {
 
         <img src={this.state.strThumb} alt='mealThumbnail' width="300" height="300" />
 
-      <p className="generatedMeal">
+      <p>
         {this.state.isFetchingRecipe
           ? 'Loading Recipe...'
           : this.state.strMeal}
