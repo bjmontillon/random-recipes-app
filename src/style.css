@@ -1,52 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
-:root {
 
+:root {}
+
+
+body {
+  margin: 0;
+  background-color: black;
 }
 
 .App {
-    font-family: sans-serif;
-    text-align: center;
-    font-family: 'Open Sans Condensed', sans-serif;;
-  }
+  max-height: 100%;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  font-family: sans-serif;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 
-  .myButton {
-    
-  }
+.wrapper {
+  margin: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "section1 section2";
+}
 
-  .myButton:hover{
-    background-color: none;
-  }
+.section1 {
+  grid-area: section1;
+}
 
-  .generatedMeal {
-    font-style:italic;
-    font-weight: 700;
-  }
+.section2 {
+  grid-area: section2;
+}
 
-  .ingredients {
-    margin: auto;
-    background-color: hsl(110, 93%, 84%);
-    min-height: 300px;
-    width: 80%;
-    display: grid;
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 
+.generatedMeal {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.ingredients {
+  margin: auto;
+  background-color: hsl(110, 81%, 94%);
+  min-height: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
     "hero_title hero_title"
     "ingredientsList  measurementsList"
-    ;
+  ;
 
-  }
+}
 
-  .hero_title {
-    grid-area: hero_title;
-    font-size: 1.5em;
-  }
+.hero_title {
+  grid-area: hero_title;
+  font-size: 1.5em;
+}
 
-  .ingredientsList {
-    grid-area: ingredientsList;
-    font-weight: 700;
-  }
-  .measurementsList {
-    grid-area: measurementsList;
-    font-weight: 300;
-  }
+.ingredientsList {
+  grid-area: ingredientsList;
+  font-weight: 700;
+}
+
+.measurementsList {
+  grid-area: measurementsList;
+  font-weight: 300;
+}
