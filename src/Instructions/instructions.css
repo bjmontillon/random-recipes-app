@@ -1,0 +1,12 @@
+.instruction-wrapper{
+    display: grid;
+    place-items: center;
+}
+
+.instructions {
+    font-style: italic;
+    font-size: 1.0248901903367496vw;
+    width: 80%;
+    text-align: center;
+    letter-spacing: .2vw;
+}

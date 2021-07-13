@@ -1,4 +1,14 @@
-.header{
-    color: black;
+nav {
+    
     height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: hsl(300, 88%, 90%);
 }
+
+.header-title {
+    margin: auto;
+    color: black;
+}
+
