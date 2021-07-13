@@ -26,8 +26,9 @@ body {
   display: grid;
   background-color: blue;
   height: 100%;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30px 500px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 64px 500px 500px;
+  grid-gap: 10px;
   grid-template-areas: 
   'header header'
   'wrapper wrapper'
@@ -36,20 +37,22 @@ body {
 
 .header {
   grid-area: header;
+  height: 60px;
 }
 
 .wrapper {
   grid-area: wrapper;
   height: 450px;
-  margin: auto;
-  background-color: green;
+  
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-areas: "section1 section2";
 }
 
 .section1 {
   grid-area: section1;
+  width: 100%;
+  background-color: rgb(115, 213, 115);
 }
 
 
@@ -61,6 +64,7 @@ body {
 
 .section2 {
   grid-area: section2;
+  background-color: rgb(56, 112, 56);
 }
 
 .sourceLink {
