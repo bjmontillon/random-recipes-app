@@ -6,6 +6,7 @@
 body {
   margin: 0;
   background-color: rgb(255, 255, 255);
+  height: 100%;
 }
 
 .App {
@@ -13,18 +14,35 @@ body {
   max-height: 100%;
   width: 80%;
   margin: auto;
-  padding: 20px;
   background-color: hsl(51, 17%, 92%);
   font-family: sans-serif;
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
+  align-items: center;
+}
+
+.main-container {
+  margin: auto;
+  display: grid;
+  background-color: blue;
+  height: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30px 500px 300px;
+  grid-template-areas: 
+  'header header'
+  'wrapper wrapper'
+  'responsive-player responsive-player';
+}
+
+.header {
+  grid-area: header;
 }
 
 .wrapper {
-  overflow: hidden;
+  grid-area: wrapper;
   height: 450px;
   margin: auto;
-  width: 80%;
+  background-color: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "section1 section2";
@@ -32,6 +50,13 @@ body {
 
 .section1 {
   grid-area: section1;
+}
+
+
+.myButton {
+  border: 1px solid hsl(0, 0%, 0%);
+  height: 10%;
+  width: 50%;
 }
 
 .section2 {
@@ -83,4 +108,8 @@ body {
   grid-area: measurementsList;
   font-weight: 300;
   font-size: .8em;
+}
+
+.responsive-player {
+  grid-area: responsive-player;
 }
