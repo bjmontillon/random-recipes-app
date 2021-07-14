@@ -9,7 +9,7 @@ const Responsiveplayer = ({ url }) => {
           <ReactPlayer
             className='react-player'
             url = { url }
-            width ='80%'
+            width ='70%'
             height ='80%'
             controls = {true}
           />

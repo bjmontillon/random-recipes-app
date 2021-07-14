@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Responsiveplayer from './responsiveplayer/reactplayer'
-import Header from './header/header'
-import Instructions from './Instructions/instructions'
+import Header from './header/header';
+import Instructions from './Instructions/instructions';
+import Responsiveplayer from './responsiveplayer/reactplayer';
+import SubscribeForm from './subscribe-form/subscribe'
+import Footer from './footer/footer';
 import '../src/style.css';
 
 
@@ -18,7 +20,8 @@ class App extends React.Component {
       strThumb: null,
       strSource: null,
       strYoutube: null,
-      strInstructions: null
+      strInstructions: null,
+      strCategory: null
     };
     this.randomRecipe = this.randomRecipe.bind (this);
   }
@@ -44,7 +47,8 @@ class App extends React.Component {
           strThumb: json.meals[0].strMealThumb,
           strSource: json.meals[0].strSource,
           strYoutube: json.meals[0].strYoutube,
-          strInstructions: json.meals[0].strInstructions
+          strInstructions: json.meals[0].strInstructions,
+          strCategory: json.meals[0].strCategory
         });
         this.trialMeal = json.meals[0];
         console.log(this.trialMeal);
@@ -56,10 +60,6 @@ class App extends React.Component {
   }
 
   render () {
-
-    const strMealThumbStyle = {
-      backgroundColor: 'white'
-    }
     return (
       <div className="App">
           <div className="main-container">
@@ -68,27 +68,34 @@ class App extends React.Component {
             </div>
             <div className="wrapper">
 
-              <div className="section1" style={strMealThumbStyle}>
-              
+              <div className="section1">
+                <div className="image-wrapper">
+                
                 <h1 className='recipeName'>
                   {this.state.isFetchingRecipe
                     ? 'Loading Recipe...'
                     : this.state.strMeal}
                 </h1>
+                  <img className='imageThumb' src={this.state.strThumb} alt='mealThumbnail' />
+                </div>
+                <div className="recipe-details">
+                <div className="meal-catergory">
+                      <h3 className="meal-category-title">{this.state.strCategory}</h3>
+                  </div>
                   <a className="sourceLink" href={this.state.strSource} rel="noreferrer" target="_blank">Source Link</a>
                   <br />
-                  <img src={this.state.strThumb} alt='mealThumbnail' width="200" height="200" />
-                
                   <button
                     className="myButton"
                     onClick={this.randomRecipe}
-                    disabled={this.state.isFetchingRecipe}>Generate Recipe
+                    disabled={this.state.isFetchingRecipe}>
+                    Generate Recipe
                   </button>
+                </div>
               </div>
 
               <div className="section2">
                 <div className='ingredients'>
-                  <h1 className='hero_title'>Ingredients</h1>
+                  <h1 className='ingredients_title'>Ingredients</h1>
                   <div className='ingredientsList'>
                       {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strIngredient1}</p>))}
                       {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strIngredient2}</p>))}
@@ -112,27 +119,27 @@ class App extends React.Component {
                       {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strIngredient20}</p>))}
                     </div>
                   <div className='measurementsList'>
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure1}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure2}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure3}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure4}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure5}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure6}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure7}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure8}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure9}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure10}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure11}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure12}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure13}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure14}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure15}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure16}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure17}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure18}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure19}</p>))}
-                      {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure20}</p>))}
-                    </div>
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure1}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure2}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure3}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure4}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure5}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure6}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure7}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure8}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure9}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure10}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure11}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure12}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure13}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure14}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure15}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure16}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure17}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure18}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure19}</p>))}
+                    {this.state.arraylist.map (item => (<p key={item.idMeal}>{item.strMeasure20}</p>))}
+                  </div>
                 </div>
               </div>
                 
@@ -143,7 +150,12 @@ class App extends React.Component {
             <div className="responsive-player">
               <Responsiveplayer url={this.state.strYoutube} />
             </div>
-            
+            <div className="subscribe-form">
+              <SubscribeForm />
+            </div>
+            <div className="footer">
+                <Footer />
+            </div>
           </div>
       </div>
       

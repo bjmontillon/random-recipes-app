@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
 .instruction-wrapper{
     display: grid;
     place-items: center;
 }
 
 .instructions {
-    font-style: italic;
-    font-size: 1.0248901903367496vw;
+    font-family: 'Merriweather', serif;
+    font-size: 0.9vw;
     width: 80%;
     text-align: center;
-    letter-spacing: .2vw;
+    letter-spacing: .1vw;
 }

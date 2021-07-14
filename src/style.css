@@ -2,6 +2,9 @@
 
 :root {}
 
+* {
+  margin: 0;
+}
 
 body {
   margin: 0;
@@ -22,16 +25,18 @@ body {
 .main-container {
   margin: auto;
   display: grid;
-  background-color: blue;
   max-height: 100%;
   width: 80%;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 64px 370px 14.641288433382138vw 500px;
+  grid-template-rows: 64px 370px 19.641288vw 100px 100px;
   grid-template-areas: 
   'header header'
   'wrapper wrapper'
-  'instructions instructions'
-  'responsive-player responsive-player';
+  'instructions responsive-player'
+  'subscribe-form subscribe-form'
+  'footer footer'
+  ;
+  row-gap: 10px;
 }
 
 .header {
@@ -44,7 +49,7 @@ body {
   max-height: 500px;
   display: grid;
   position: relative;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
   grid-template-areas: "section1 section2";
  
 }
@@ -61,21 +66,31 @@ body {
   font-size: 1.5em;
   height: 18%;
 }
-
-.myButton {
-  border: 1px solid hsl(0, 0%, 0%);
-  height: 10%;
-  width: 50%;
-  padding: 0;
+.image-wrapper {
+  height:70%;
+  display: grid;
+  place-items: center;
 }
 
-.section2 {
-  grid-area: section2;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(56, 112, 56);
-  text-align: center;
-  overflow:scroll;
+.recipe-details {
+  max-height:30%
+}
+
+.meal-category-title {
+  margin: 0;
+}
+                     
+.myButton {
+  border: 1px solid hsl(0, 0%, 0%);
+  height: 30px;
+  width: 25%;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.myButton:hover {
+  background-color: rgb(255, 255, 255);
+  transition: .5s;
 }
 
 .sourceLink {
@@ -85,6 +100,27 @@ body {
   font-style: italic;
   font-weight: bold;
 }
+
+.sourceLink:hover {
+  text-decoration: underline;
+}
+
+.imageThumb {
+  height: 200px;
+  width: 200px;
+  position: relative;
+
+}
+
+.section2 {
+  grid-area: section2;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 
 .generatedMeal {
   font-style: italic;
@@ -102,16 +138,18 @@ body {
     "hero_title hero_title"
     "ingredientsList  measurementsList"
   ;
-  overflow-x:scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.hero_title {
+.ingredients_title {
   grid-area: hero_title;
   font-size: 1.5em;
+  margin: 0;
 }
 
 .ingredientsList {
-  line-height: 1;
+  line-height: 1.2;
   grid-area: ingredientsList;
   font-weight: 700;
   font-size: .8em;
@@ -119,7 +157,7 @@ body {
 }
 
 .measurementsList {
-  line-height: 1;
+  line-height: 1.2;
   grid-area: measurementsList;
   font-weight: 300;
   font-size: .8em;
@@ -129,10 +167,18 @@ body {
   grid-area: instructions;
   display: grid;
   place-items: center;
-  background-color: white;
+  background-color: hsl(51, 17%, 92%);
   overflow-x:scroll;
 }
 
 .responsive-player {
   grid-area: responsive-player;
+}
+
+.subscribe-form {
+  grid-area: subscribe-form;
+}
+
+.footer {
+  grid-area: footer;
 }
