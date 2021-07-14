@@ -3,6 +3,7 @@
 .instruction-wrapper{
     display: grid;
     place-items: center;
+    
 }
 
 .instructions {
