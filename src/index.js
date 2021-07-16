@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Header from './header/header';
 import Instructions from './Instructions/instructions';
 import Responsiveplayer from './responsiveplayer/reactplayer';
-import SubscribeForm from './subscribe-form/subscribe'
 import Footer from './footer/footer';
 import '../src/style.css';
 import SimpleForm from '../src/mailchimp/mailchimpSubscribe'
