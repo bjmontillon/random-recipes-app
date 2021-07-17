@@ -4,7 +4,7 @@
 
 * {
   margin: 0;
-  border: 1px solid red;
+  
 }
 
 body {
@@ -177,8 +177,11 @@ body {
   grid-area: responsive-player;
 }
 
-.subscribe-form {
+.subscribeform {
   grid-area: subscribe-form;
+  display: grid;
+  align-items: center;
+  justify-items:end;
 }
 
 .footer {

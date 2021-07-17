@@ -5,7 +5,7 @@ import Instructions from './Instructions/instructions';
 import Responsiveplayer from './responsiveplayer/reactplayer';
 import Footer from './footer/footer';
 import '../src/style.css';
-import SimpleForm from '../src/mailchimp/mailchimpSubscribe'
+import CustomForm from '../src/mailchimp/mailchimpSubscribe'
 
 
 
@@ -150,8 +150,8 @@ class App extends React.Component {
             <div className="responsive-player">
               <Responsiveplayer url={this.state.strYoutube} />
             </div>
-            <div className="subscribe-form">
-              <SimpleForm />
+            <div className="subscribeform">
+              <CustomForm />
             </div>
             <div className="footer">
                 <Footer />
