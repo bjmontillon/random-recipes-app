@@ -8,7 +8,6 @@
 
 body {
   margin: 0;
-  background-color: rgb(255, 255, 255);
   height: 100%;
 }
 
@@ -17,7 +16,7 @@ body {
   max-height: 100%;
   width: 100%;
   margin: auto;
-  background-color: hsl(51, 17%, 92%);
+  background-color: rgb(186, 226, 240);
   font-family: sans-serif;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -192,4 +191,47 @@ body {
 
 .authorinfo {
   grid-area: authorinfo;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .main-container {
+
+    grid-template-columns: 100%;
+    grid-template-rows: 64px 
+                        600px 
+                        50.641288vw 
+                        100px 
+                        100px
+                        100px
+                        100px;
+    grid-template-areas: 
+    'header'
+    'wrapper'
+    'responsive-player'
+    'instructions'
+    'subscribe-form'
+    'authorinfo'
+    'footer'
+    ;
+    gap: 10px 0;
+  }
+
+  .wrapper {
+    max-height: 600px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    grid-template-rows: 390px
+                        210px;
+    grid-template-areas: "section1" 
+                         "section2";
+  }
+
+  .section1 {
+    
+  }
+  .section2 {
+    
+  }
 }
