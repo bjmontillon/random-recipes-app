@@ -4,6 +4,7 @@ import Header from './header/header';
 import Instructions from './Instructions/instructions';
 import Responsiveplayer from './responsiveplayer/reactplayer';
 import Footer from './footer/footer';
+import Author from './author/authorinfo';
 import '../src/style.css';
 import CustomForm from '../src/mailchimp/mailchimpSubscribe'
 
@@ -153,9 +154,12 @@ class App extends React.Component {
             <div className="subscribeform">
               <CustomForm />
             </div>
+            <div className='authorinfo'><Author /></div>
             <div className="footer">
                 <Footer />
             </div>
+            
+            
           </div>
       </div>
       

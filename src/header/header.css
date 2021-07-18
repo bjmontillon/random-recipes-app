@@ -1,10 +1,8 @@
 nav {
-    
     height: 100%;
     width: 100%;
     display: grid;
-    place-items: center;
-    background-color: hsl(300, 88%, 90%);
+    background-color: hsl(7, 63%, 68%);
 }
 
 .header-title {

@@ -4,7 +4,6 @@
 
 * {
   margin: 0;
-  
 }
 
 body {
@@ -28,16 +27,16 @@ body {
   display: grid;
   max-height: 100%;
   width: 80%;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 30% 30%;
   grid-template-rows: 64px 370px 19.641288vw 100px 100px;
   grid-template-areas: 
-  'header header'
-  'wrapper wrapper'
-  'instructions responsive-player'
-  'subscribe-form subscribe-form'
-  'footer footer'
+  'header header header'
+  'wrapper wrapper authorinfo'
+  'instructions responsive-player authorinfo'
+  'subscribe-form subscribe-form subscribe-form'
+  'footer footer footer'
   ;
-  row-gap: 10px;
+  gap: 10px 5px;
 }
 
 .header {
@@ -52,7 +51,8 @@ body {
   position: relative;
   grid-template-columns: 60% 40%;
   grid-template-areas: "section1 section2";
- 
+ background-color: white;
+ border-radius: 10px;
 }
 
 .section1 {
@@ -180,10 +180,16 @@ body {
 .subscribeform {
   grid-area: subscribe-form;
   display: grid;
-  align-items: center;
-  justify-items:end;
+  place-items: center;
+  text-align: center;
+  background-color: rgb(226, 202, 178);
+  border: 1px solid hsl(0, 0%, 0%);
 }
 
 .footer {
   grid-area: footer;
+}
+
+.authorinfo {
+  grid-area: authorinfo;
 }

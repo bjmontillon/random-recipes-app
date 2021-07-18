@@ -6,16 +6,16 @@ import '../mailchimp/mailchimpSubscribe.css'
 const url = "https://gmail.us6.list-manage.com/subscribe/post?u=e64f84234b711fab0dd2bf9a3&amp;id=7e7a7cc18b";
 
 // simplest form (only email)
-const SimpleForm = () => <MailchimpSubscribe url={url}/>
+const SimpleForm = () => <MailchimpSubscribe  url={url}/>
 
 // use the render prop and your custom form
 const CustomForm = () => (
-
-  <MailchimpSubscribe
+  <MailchimpSubscribe  
 
     url={url}
     render={({ subscribe, status, message }) => (
-        <div className='subscribe-form'>
+        <div>
+        <p className='promote'>Want to start your own food blog?</p>
           <SimpleForm onSubmitted={formData => subscribe(formData)} />
           {status === "sending" && <div style={{ color: "black" }}>sending...</div>}
           {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
@@ -23,6 +23,7 @@ const CustomForm = () => (
         </div>
     )}
   />
+  
 )
 
 export default CustomForm
