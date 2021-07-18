@@ -167,9 +167,10 @@ body {
   grid-area: instructions;
   display: grid;
   place-items: center;
-  background-color: hsl(51, 17%, 92%);
-  
   overflow-x: hidden;
+  background-color: hsl(51, 17%, 92%);
+  border-radius: 10px;
+  padding-top: 12px;
 }
 
 .responsive-player {
@@ -201,7 +202,7 @@ body {
     grid-template-rows: 64px 
                         600px 
                         50.641288vw 
-                        100px 
+                        420px 
                         100px
                         100px
                         100px;

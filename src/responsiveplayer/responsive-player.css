@@ -9,5 +9,11 @@
   
   .react-player {
     margin: auto;
-    height: 100%;
+    width: 80%;
+    height: 90%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+      
   }

@@ -64,9 +64,7 @@ class App extends React.Component {
     return (
       <div className="App">
           <div className="main-container">
-            <div className="header">
-              <Header />
-            </div>
+            <div className="header"><Header /></div>
             <div className="wrapper">
 
               <div className="section1">
@@ -145,21 +143,11 @@ class App extends React.Component {
               </div>
                 
             </div>
-            <div className="instruct">
-              <Instructions instructionsState={this.state.strInstructions} />
-            </div>
-            <div className="responsive-player">
-              <Responsiveplayer url={this.state.strYoutube} />
-            </div>
-            <div className="subscribeform">
-              <CustomForm />
-            </div>
+            <div className="instruct"><Instructions instructionsState={this.state.strInstructions} /></div>
+            <div className="responsive-player"><Responsiveplayer url={this.state.strYoutube} /></div>
+            <div className="subscribeform"><CustomForm /></div>
             <div className='authorinfo'><Author /></div>
-            <div className="footer">
-                <Footer />
-            </div>
-            
-            
+            <div className="footer"><Footer /></div>
           </div>
       </div>
       
