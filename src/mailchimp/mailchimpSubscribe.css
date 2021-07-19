@@ -1,8 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .subscribe-form {
+
+      
 }
 
 .promote {
     font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .subscribeform {
+        padding: 0 5px;
+    }
+    .promote {
+        font-size: 1rem;
+    }
 }

@@ -27,7 +27,7 @@ body {
   max-height: 100%;
   width: 80%;
   grid-template-columns: 40% 30% 30%;
-  grid-template-rows: 64px 370px 19.641288vw 100px 100px;
+  grid-template-rows: 64px 370px 19.641288vw 100px 150px;
   grid-template-areas: 
   'header header header'
   'wrapper wrapper authorinfo'
@@ -64,10 +64,10 @@ body {
 .recipeName {
   margin: 0;
   font-size: 1.5em;
-  height: 18%;
+  height: 7%;
 }
 .image-wrapper {
-  height:70%;
+  height:65%;
   display: grid;
   place-items: center;
 }
@@ -82,15 +82,15 @@ body {
                      
 .myButton {
   border: 1px solid hsl(0, 0%, 0%);
-  height: 30px;
-  width: 25%;
-  padding: 0;
+  
+  width: min(100px, 50%);
+  padding: .1em;
   border-radius: 10px;
 }
 
 .myButton:hover {
-  background-color: rgb(255, 255, 255);
-  transition: .2s;
+  background-color: rgb(204, 247, 250);
+  transition: 200ms ease-in;
 }
 
 .sourceLink {
@@ -132,7 +132,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 20% 80%;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "hero_title hero_title"
@@ -144,8 +144,9 @@ body {
 
 .ingredients_title {
   grid-area: hero_title;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
+  text-decoration: underline;
 }
 
 .ingredientsList {
@@ -195,17 +196,19 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-
+  *{
+    
+  }
   .main-container {
 
     grid-template-columns: 100%;
     grid-template-rows: 64px 
                         600px 
                         50.641288vw 
-                        420px 
+                        min(240px) 
                         100px
                         100px
-                        100px;
+                        150px;
     grid-template-areas: 
     'header'
     'wrapper'
@@ -235,4 +238,6 @@ body {
   .section2 {
     
   }
+
+  
 }

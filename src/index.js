@@ -68,13 +68,12 @@ class App extends React.Component {
             <div className="wrapper">
 
               <div className="section1">
-                <div className="image-wrapper">
-                
                 <h1 className='recipeName'>
                   {this.state.isFetchingRecipe
                     ? 'Loading Recipe...'
                     : this.state.strMeal}
                 </h1>
+                <div className="image-wrapper">
                   <img className='imageThumb' src={this.state.strThumb} alt='mealThumbnail' />
                 </div>
                 <div className="recipe-details">
