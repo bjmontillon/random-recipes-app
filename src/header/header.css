@@ -3,10 +3,13 @@ nav {
     width: 100%;
     display: grid;
     background-color: hsl(7, 63%, 68%);
+    border-radius: 0 0 10px 10px;
 }
 
 .header-title {
     margin: auto;
     color: black;
+    font-family: 'Festive', cursive;
+    font-size: 2.5em;
 }
 
