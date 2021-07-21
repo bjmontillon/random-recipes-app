@@ -17,7 +17,7 @@ body {
   max-height: 100%;
   width: 100%;
   margin: auto;
-  background-color: rgb(186, 226, 240);
+  background: linear-gradient(#bbe4f5, #ebd6c1);
   font-family: sans-serif;
   font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -51,8 +51,9 @@ body {
   position: relative;
   grid-template-columns: 60% 40%;
   grid-template-areas: "section1 section2";
- background-color: white;
- border-radius: 10px;
+  background-color: rgb(249, 255, 218);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .section1 {
@@ -64,7 +65,7 @@ body {
 
 .recipeName {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.3em;
   height: 7%;
 }
 .image-wrapper {
@@ -82,16 +83,18 @@ body {
 }
                      
 .myButton {
-  border: 1px solid hsl(0, 0%, 0%);
-  
-  width: min(100px, 50%);
+  border: none;
+  height: 35px;
+  width: min(144px, 50%);
   padding: .1em;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .myButton:hover {
   background-color: rgb(204, 247, 250);
-  transition: 200ms ease-in;
+  font-weight: bold;
+  transition: 300ms ease-in;
+  
 }
 
 .sourceLink {
@@ -133,7 +136,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "hero_title hero_title"
@@ -147,22 +150,26 @@ body {
   grid-area: hero_title;
   font-size: 1.2em;
   margin: 0;
-  text-decoration: underline;
+  border-bottom: 1px solid rgb(181, 178, 178);
 }
 
 .ingredientsList {
-  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.4;
   grid-area: ingredientsList;
-  font-weight: 700;
+  font-weight: 300;
   font-size: .8em;
-
+  padding: 5px 0;
 }
 
 .measurementsList {
-  line-height: 1.2;
+  letter-spacing: 1px;
+  line-height: 1.4;
   grid-area: measurementsList;
   font-weight: 300;
   font-size: .8em;
+  padding: 5px 0;
 }
 
 .instruct {
@@ -204,7 +211,7 @@ body {
 
     grid-template-columns: 100%;
     grid-template-rows: 64px 
-                        600px 
+                        615px 
                         50.641288vw 
                         min(240px) 
                         100px
@@ -240,5 +247,8 @@ body {
     
   }
 
+  .ingredients {
+    grid-template-rows: 15% 85%;
+  }
   
 }

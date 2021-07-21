@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
+
 nav {
     height: 100%;
     width: 100%;
@@ -9,7 +11,7 @@ nav {
 .header-title {
     margin: auto;
     color: black;
-    font-family: 'Festive', cursive;
-    font-size: 2.5em;
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.8em;
 }
 
