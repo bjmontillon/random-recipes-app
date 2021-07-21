@@ -15,7 +15,7 @@
     <img src="" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">RANDOM RECIPE</h3>
+  <h3 align="center"><a href='https://bjmontillon.github.io/random-recipes-app/' target='_blank'>RANDOM RECIPE</a></h3>
 
   <p align="center">
     Generate random recipes.
