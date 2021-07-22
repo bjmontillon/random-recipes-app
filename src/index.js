@@ -50,8 +50,9 @@ class App extends React.Component {
           strYoutube: json.meals[0].strYoutube,
           strInstructions: json.meals[0].strInstructions,
           strCategory: json.meals[0].strCategory
+
         });
-        this.trialMeal = json.meals[0];
+        this.trialMeal = json.meals[0][0];
         console.log(this.trialMeal);
       });
   }

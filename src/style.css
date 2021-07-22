@@ -26,7 +26,7 @@ body {
   margin: auto;
   display: grid;
   max-height: 100%;
-  width: 80%;
+  width: 90%;
   grid-template-columns: 40% 30% 30%;
   grid-template-rows: 64px 370px 19.641288vw 100px 150px;
   grid-template-areas: 
