@@ -5,6 +5,7 @@
 
 * {
   margin: 0;
+  
 }
 
 body {
@@ -28,11 +29,11 @@ body {
   max-height: 100%;
   width: 90%;
   grid-template-columns: 40% 30% 30%;
-  grid-template-rows: 64px 370px 19.641288vw 100px 150px;
+  grid-template-rows: 64px 370px 33.641288vw 100px 150px;
   grid-template-areas: 
   'header header header'
   'wrapper wrapper authorinfo'
-  'instructions responsive-player authorinfo'
+  'instructions responsive-player responsive-player'
   'subscribe-form subscribe-form subscribe-form'
   'footer footer footer'
   ;
