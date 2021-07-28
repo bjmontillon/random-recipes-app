@@ -84,11 +84,9 @@ body {
 }
                      
 .myButton {
-  border: none;
   height: 35px;
   width: min(144px, 50%);
-  padding: .1em;
-  border-radius: 15px;
+  
 }
 
 .myButton:hover {

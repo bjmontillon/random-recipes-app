@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
 import ReactDOM from 'react-dom';
 import Header from './header/header';
 import Instructions from './Instructions/instructions';
@@ -7,6 +9,7 @@ import Footer from './footer/footer';
 import Author from './author/authorinfo';
 import '../src/style.css';
 import CustomForm from '../src/mailchimp/mailchimpSubscribe'
+
 
 
 
@@ -83,12 +86,10 @@ class App extends React.Component {
                   </div>
                   <a className="sourceLink" href={this.state.strSource} rel="noreferrer" target="_blank">Source Link</a>
                   <br />
-                  <button
-                    className="myButton"
-                    onClick={this.randomRecipe}
-                    disabled={this.state.isFetchingRecipe}>
-                    Generate Recipe
-                  </button>
+                  <Button 
+                  endIcon={<AutorenewIcon />} className="myButton" color="primary" variant='contained' onClick={this.randomRecipe} disabled={this.state.isFetchingRecipe}>
+                  Recipe</Button>
+                  
                 </div>
               </div>
 
