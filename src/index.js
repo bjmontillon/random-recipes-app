@@ -1,20 +1,19 @@
 import React from 'react';
-
+import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 
 import ReactDOM from 'react-dom';
-import Header from './header/header';
+import NavBar from './header/header';
+
 import Instructions from './Instructions/instructions';
 import Responsiveplayer from './responsiveplayer/reactplayer';
 import Footer from './footer/footer';
 import Author from './author/authorinfo';
 import '../src/style.css';
 import CustomForm from '../src/mailchimp/mailchimpSubscribe'
-
-
 
 
 class App extends React.Component {
@@ -33,6 +32,8 @@ class App extends React.Component {
     };
     this.randomRecipe = this.randomRecipe.bind (this);
   }
+
+  
 
   componentDidMount () {
     this.FetchingRecipe ();
@@ -68,16 +69,20 @@ class App extends React.Component {
     this.FetchingRecipe ();
   }
 
-  render () {
-    return (
-      <div className="App">
-          
 
-          <Grid container className='mainGrid' sm ={12}>
-              <Grid container justifyContent='center' xs={12}><Header /></Grid>
+  
+  render () {
+
+    return (
+      <div className='App'>
+          
+        <Container spacing={1} maxWidth='xl'>
+              <Grid item justifyContent='center' xs={12}>
+                <NavBar />
+              </Grid>
               <Grid container xs={12}>
-                <Grid container justifyContent='center' alignItems='center' direction='column' xs={12} sm={6} md={6} lg={5}>
-                  <Paper>
+                <Grid item justifyContent='center' alignItems='center' direction='column' xs={12} sm={6} md={6} lg={5}>
+                  <Paper style={{ width:'100%' }}>
                       <h1 className='recipeName'>
                         {this.state.isFetchingRecipe
                           ? 'Loading Recipe...'
@@ -98,7 +103,7 @@ class App extends React.Component {
                       </div>
                   </Paper>
                 </Grid>
-                <Grid container  justifyContent='center' alignItems='center' xs={12} sm={6} md={6} lg={4}>
+                <Grid item  justifyContent='center' alignItems='center' xs={12} sm={6} md={6} lg={4}>
                 <div className='ingredients'>
                 <h1 className='ingredients_title'>Ingredients</h1>
                 <div className='ingredientsList'>
@@ -147,16 +152,16 @@ class App extends React.Component {
                 </div>
               </div>
                 </Grid>
-                <Grid container justifyContent='center' xs={12} sm={12} md={12} lg={3}><Author /></Grid>
+                <Grid item justifyContent='center' xs={12} sm={12} md={12} lg={3}><Author /></Grid>
               </Grid>
               <Grid xs={12} sm={6}><Paper><Instructions instructionsState={this.state.strInstructions} /></Paper></Grid>
               <Grid xs={12} sm={6}><Paper><Responsiveplayer url={this.state.strYoutube} /></Paper></Grid>
               <Grid xs={12}><CustomForm /></Grid>
               <Grid xs={12}><Footer /></Grid>
-          </Grid>
-          
+
+        </Container>
+
       </div>
-      
     );
   }
 }

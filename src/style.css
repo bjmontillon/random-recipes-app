@@ -11,17 +11,19 @@
 body {
   margin: 0;
   height: 100%;
+  width:100%;
+  background: linear-gradient(#bbe4f5, #ebd6c1);
 }
 
 .App {
   border: 1px solid black;
   max-height: 100%;
-  width: 100%;
   margin: auto;
-  background: linear-gradient(#bbe4f5, #ebd6c1);
   font-family: sans-serif;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
+
 
 .main-container {
   margin: auto;
@@ -211,27 +213,10 @@ body {
   *{
     
   }
-  .main-container {
 
-    grid-template-columns: 100%;
-    grid-template-rows: 64px 
-                        615px 
-                        50.641288vw 
-                        min(240px) 
-                        100px
-                        100px
-                        150px;
-    grid-template-areas: 
-    'header'
-    'wrapper'
-    'responsive-player'
-    'instructions'
-    'subscribe-form'
-    'authorinfo'
-    'footer'
-    ;
-    gap: 10px 0;
-  }
+  /* .App {
+    width: 100%;
+  } */
 
   .wrapper {
     max-height: 600px;

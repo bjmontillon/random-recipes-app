@@ -1,26 +1,27 @@
 import React from 'react';
-import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles ({
+    NavBar: {
+        backgroundColor: '#fff8f8',
+        width: '100%',
+        textAlign: 'center',
+        letterSpacing: '3px'
+    },
+     NavTitle: {
+         fontSize: '2rem',
+         fontFamily: "'Style Script', cursive"
+     },
+})
 
 
-const Nav = styled.nav  `
-    background-color: #fff8f8;
-    width: 100%;
-    display: grid;
-    place-items: center;
-    height: 63px;
-    border-radius: 0 0 10px 10px;
-    `
-const HeaderTitle = styled.h1 `
-    font-size: 2rem;
-    font-family: 'Style Script', cursive;
-`
-
-function Header() {
+function NavBar() {
+    const classes= useStyles();
     return (
-        <Nav className='header'>
-            <HeaderTitle className='header-title'>Random Recipe</HeaderTitle>
-        </Nav>
+        <div className={classes.NavBar}>
+            <div className={classes.NavTitle}>Random Recipe</div>
+        </div>
     )
 }
 
-export default Header
+export default NavBar
