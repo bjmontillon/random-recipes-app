@@ -79,24 +79,23 @@ class App extends React.Component {
                 <Grid container justifyContent='center' alignItems='center' direction='column' xs={12} sm={6} md={6} lg={5}>
                   <Paper>
                       <h1 className='recipeName'>
-                      {this.state.isFetchingRecipe
-                        ? 'Loading Recipe...'
-                        : this.state.strMeal}
-                    </h1>
-                    <div className="image-wrapper">
-                      <img className='imageThumb' src={this.state.strThumb} alt='mealThumbnail' />
-                    </div>
-                    <div className="recipe-details">
-                    <div className="meal-catergory">
-                          <h3 className="meal-category-title">{this.state.strCategory}</h3>
+                        {this.state.isFetchingRecipe
+                          ? 'Loading Recipe...'
+                          : this.state.strMeal}
+                      </h1>
+                      <div className="image-wrapper">
+                        <img className='imageThumb' src={this.state.strThumb} alt='mealThumbnail' />
                       </div>
-                      <a className="sourceLink" href={this.state.strSource} rel="noreferrer" target="_blank">Source Link</a>
-                      <br />
-                      <Button 
-                      endIcon={<AutorenewIcon />} className="myButton" color="primary" variant='contained' onClick={this.randomRecipe} disabled={this.state.isFetchingRecipe}>
-                      Recipe</Button>
-                      
-                    </div>
+                      <div className="recipe-details">
+                      <div className="meal-catergory">
+                        <h3 className="meal-category-title">{this.state.strCategory}</h3>
+                      </div>
+                        <a className="sourceLink" href={this.state.strSource} rel="noreferrer" target="_blank">Source Link</a>
+                        <br />
+                        <Button 
+                        endIcon={<AutorenewIcon />} className="myButton" color="primary" variant='contained' onClick={this.randomRecipe} disabled={this.state.isFetchingRecipe}>
+                        Recipe</Button>
+                      </div>
                   </Paper>
                 </Grid>
                 <Grid container  justifyContent='center' alignItems='center' xs={12} sm={6} md={6} lg={4}>
