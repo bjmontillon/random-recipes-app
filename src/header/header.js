@@ -1,27 +1,39 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+//import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles ({
-    NavBar: {
-        backgroundColor: '#fff8f8',
+
+const useStyles = makeStyles({
+    navBar: {
+        maxHeight: '63px',
+        borderBottom: '1px solid black',
+        backgroundColor: 'pink'
+    },
+    headerTitle: {
+        height: '100%',
         width: '100%',
         textAlign: 'center',
-        letterSpacing: '3px'
+        //importborder: '1px solid red',
+        fontSize: '8.199121522693996vw',
+        fontFamily: "'Style Script', cursive",
     },
-     NavTitle: {
-         fontSize: '2rem',
-         fontFamily: "'Style Script', cursive"
-     },
 })
 
+function Header() {
 
-function NavBar() {
-    const classes= useStyles();
+    const classes = useStyles()
+
     return (
-        <div className={classes.NavBar}>
-            <div className={classes.NavTitle}>Random Recipe</div>
-        </div>
-    )
-}
+        <Grid container xs={12}>
+            <Grid item xs={12} className={ classes.headerTitle }>
+                Random Recipe
+            </Grid>
+            
+        </Grid>
+        
+    );
 
-export default NavBar
+};
+
+export default Header;
