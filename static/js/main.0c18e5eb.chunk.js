@@ -1,0 +1,2 @@
+(this["webpackJsonprandom-recipe"]=this["webpackJsonprandom-recipe"]||[]).push([[0],{4:function(e,n,c){"use strict";c.r(n);c(1);var r=c(3),t=c.n(r),s=(c(9),c(0));function i(){return Object(s.jsx)("div",{className:"App",children:Object(s.jsx)("h1",{children:"hello"})})}var o=document.getElementById("root");t.a.render(Object(s.jsx)(i,{}),o)},9:function(e,n,c){}},[[4,1,2]]]);
+//# sourceMappingURL=main.0c18e5eb.chunk.js.map
