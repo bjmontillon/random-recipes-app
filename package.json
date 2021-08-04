@@ -2,7 +2,7 @@
   "name": "random-recipe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bjmontillon.github.io/random-recipes-app/",
+  "homepage": "https://bjmontillon.github.io/random-recipes-app",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
